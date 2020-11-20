@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+
+{% block body %}
+
+<div class="col-sm-6" style="margin-left: 340px;">
+<form method="POST" style="margin-top: 90px;" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.media}}
+    {% bootstrap_form form %}
+    <input type="submit" value="Add Note" class="btn btn-success" style="width: 100%; margin-bottom: 10px;">
+</form>
+</div>
+
+{% endblock body %} 
